@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.3",
+    "playwright": "^1.52.0"
+  },
+  "name": "kms-lighthouse",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "kms-lighthouse": "file:",
+    "playwright-core": "^1.52.0"
+  },
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
