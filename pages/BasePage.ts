@@ -75,6 +75,11 @@ export abstract class BasePage {
         }
     }
 
+    protected async focusOnElement(element: Locator)
+    {
+        await element.focus();
+    }
+
     protected async titleCase(value: string): Promise<string>{
         try{
         return value.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase + word.slice(1)).join(' ');
@@ -101,6 +106,4 @@ export abstract class BasePage {
         const fontSize = await element.evaluate(el => window.getComputedStyle(el).fontSize);
         return parseFloat(fontSize);
     }
-
-   
 }

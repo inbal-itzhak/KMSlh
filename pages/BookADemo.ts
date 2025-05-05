@@ -45,6 +45,18 @@ export class BookADemo extends BasePage{
         this.missingCountryError = this.page.locator(".hs_country .hs-error-msg");
     }
 
+    public async bookADemoFull(firstName: string, lastName: string, email: string, phone: string, jobTitle: string, country: string, message:string)
+    {
+              await this.fillInFirstName(firstName);
+              await this.fillInLastName(lastName);
+              await this.fillInEmail(email);
+              await this.fillInPhone(phone);
+              await this.fillInJobTitle(jobTitle);
+              await this.selectCountry(country);
+              await this.fillInMessage(message);
+              
+    }
+
 
     public async fillInFirstName(firstName: string)
     {
@@ -134,13 +146,15 @@ export class BookADemo extends BasePage{
 
     public async fillInMessage(message: string)
     {
-        await this.fillText(this.messageField, message)
+        await this.messageField.fill(message);
+        //await this.fillText(this.messageField, message)
     }
 
     public async getMessageText(): Promise<string>
     {
         try{
-        const name = await this.messageField.getAttribute("value")
+        //const name = await this.messageField.getAttribute("value")
+        const name = await this.messageField.textContent();
         return name?.trim() ?? "";
         }
         catch (error){
@@ -188,6 +202,11 @@ export class BookADemo extends BasePage{
             console.log("calander header is not visible", error);
             return false;
         }
+    }
+
+    public async focusOnBookADemo()
+    {
+        await this.focusOnElement(this.bookADemoBTN);
     }
     
     public async getMissingFirstNameError(): Promise<string>

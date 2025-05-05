@@ -14,7 +14,7 @@ export const userData = {
     email: "inbalitzhak.1@work.com",
     phoneNumber: "052-8577810",
     jobTitle: "",
-    country: "",
+    country: "Israel",
     message: "please book a demo",
     missingFieldError: "Please complete this required field."
   }

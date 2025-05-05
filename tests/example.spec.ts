@@ -1,8 +1,9 @@
-//import { test, expect } from '@playwright/test';
+/*
+import { test, expect } from '@playwright/test';
 import { test, expect } from '../fixtures/baseFixture.js';
 import { NavBar } from '../pages/NavBar.js';
 import {TestConfig} from '../config/testConfig.js'
-/*
+
 test('has title', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 

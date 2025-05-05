@@ -2,9 +2,9 @@
 ## Prerequesite
 **Installations**
 clone main branch:
-git clone https://github.com/inbal-itzhak/KMSlh.git --branch main --single-branch <your-folder>  
-navigate to: <your-folder>  
-cd <your-folder>  
+git clone https://github.com/inbal-itzhak/KMSlh.git --branch main --single-branch [your-folder]  
+navigate to: [your-folder]    
+cd [your-folder]   
 install dependencies:  
 npm install playwright-test  
 
