@@ -45,3 +45,9 @@ jobs:
         publish_dir: ./playwright-report
         publish_branch: gh-pages
         keep_files: true
+
+    - name: Log GitHub Pages Report URL
+      if: success() || failure()
+      run: |
+        echo "View the HTML report at: https://inbal-itzhak.github.io/KMSlh/"
+
