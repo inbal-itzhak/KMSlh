@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: mcr.microsoft.com/playwright:v1.52.0
+      env:
+        HOME: /root
 
     steps:
     - name: Checkout repository
@@ -22,6 +24,7 @@ jobs:
 
     - name: Run Playwright tests
       run: npx playwright test --reporter=html
+      
 
     - name: Upload Playwright HTML report
       if: always()
